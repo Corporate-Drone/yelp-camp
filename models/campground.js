@@ -8,6 +8,11 @@ const CampgroundSchema = new Schema({
     price: Number,
     description: String,
     location: String,
+    author: {
+        //acquire author ID & populate using User model
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    },
     reviews: [
         {
             //acquire review ID & populate using Review model
